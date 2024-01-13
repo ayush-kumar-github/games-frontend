@@ -102,36 +102,37 @@ const ProfileScreen = () => {
               </tr>
             </thead>
             <tbody>
-              {orders?.map((order) => (
-                <tr key={order._id}>
-                  <td className="py-2 px-4 border-b">
-                    <Link
-                      to={`/order/${order._id}`}
-                      className="text-blue-500 hover:underline"
-                    >
-                      {order._id}
-                    </Link>
-                  </td>
-                  <td className="py-2 px-20 border-b ml-6">
-                    {order.createdAt.substring(0, 10)}
-                  </td>
-                  <td className="py-2 px-8 border-b">{order.totalPrice}</td>
-                  <td className="py-2 px-8 border-b">
-                    {order.isPaid ? (
-                      order?.paidAt.substring(0, 10)
-                    ) : (
-                      <span className="text-red-500">🔴</span>
-                    )}
-                  </td>
-                  <td className="py-2 px-8 border-b">
-                    {order.isDelivered ? (
-                      order.deliveredAt.substring(0, 10)
-                    ) : (
-                      <span className="text-red-500 ">🔴</span>
-                    )}
-                  </td>
-                </tr>
-              ))}
+              {userInfo &&
+                orders?.map((order) => (
+                  <tr key={order._id}>
+                    <td className="py-2 px-4 border-b">
+                      <Link
+                        to={`/order/${order._id}`}
+                        className="text-blue-500 hover:underline"
+                      >
+                        {order._id}
+                      </Link>
+                    </td>
+                    <td className="py-2 px-20 border-b ml-6">
+                      {order.createdAt.substring(0, 10)}
+                    </td>
+                    <td className="py-2 px-8 border-b">{order.totalPrice}</td>
+                    <td className="py-2 px-8 border-b">
+                      {order.isPaid ? (
+                        order?.paidAt.substring(0, 10)
+                      ) : (
+                        <span className="text-red-500">🔴</span>
+                      )}
+                    </td>
+                    <td className="py-2 px-8 border-b">
+                      {order.isDelivered ? (
+                        order.deliveredAt.substring(0, 10)
+                      ) : (
+                        <span className="text-red-500 ">🔴</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
