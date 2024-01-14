@@ -12,7 +12,6 @@ const HomeScreen = () => {
     keyword,
     pageNumber,
   });
-  console.log(data);
 
   if (isLoading) {
     return <ShimmerHome />;
