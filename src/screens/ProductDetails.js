@@ -15,10 +15,8 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   const { userInfo } = useSelector((state) => state.auth);
-  console.log(userInfo);
 
   const { data, isLoading, error, refetch } = useGetProductDetailsQuery(id);
-  console.log(data);
   const [createReview, { isLoading: loadingProductReview }] =
     useCreateReviewMutation();
 

@@ -14,7 +14,7 @@ const ProfileScreen = () => {
   const dispatch = useDispatch();
 
   const { userInfo } = useSelector((state) => state.auth);
-
+  console.log(userInfo);
   const { data: orders, isLoading, error } = useGetMyOrdersQuery();
   console.log(orders);
   const [updateProfile, { isLoading: loadingUpdateProfile }] =
