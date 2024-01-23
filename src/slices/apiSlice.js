@@ -5,7 +5,7 @@ import { logout } from "./authSlice";
 const baseQuery = fetchBaseQuery({
   baseUrl: BASE_URL,
   headers: {
-    Authorization: `Bearer ${jwt}`,
+    Authorization: `Bearer ${process.env.JWT_SECRET}`,
   },
 });
 
