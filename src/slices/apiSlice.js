@@ -4,7 +4,6 @@ import { logout } from "./authSlice";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: BASE_URL,
-  mode: "cors",
 });
 
 async function baseQueryWithAuth(args, api, extra) {
