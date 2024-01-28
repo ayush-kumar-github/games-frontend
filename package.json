@@ -2,7 +2,6 @@
   "name": "hitandtrial",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://games-backend-ctzu.vercel.app/",
   "dependencies": {
     "@paypal/react-paypal-js": "^8.1.3",
     "@reduxjs/toolkit": "^1.9.7",
